@@ -1,11 +1,11 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const path = require('path');
-const generateHTML = require('./utils/generateHTML.js');
-const Employee = require('./utils/employee.js')
-const Manager = require('./utils/manager.js');
-const Engineer = require('./utils/engineer.js');
-const Intern = require('./utils/intern.js');
+const generateHTML = require('./src/generateHTML.js');
+const Employee = require('./src/employee.js')
+const Manager = require('./src/manager.js');
+const Engineer = require('./src/engineer.js');
+const Intern = require('./src/intern.js');
 const managerArray = [];
 const engineerArray = [];
 const internArray = [];
@@ -123,7 +123,7 @@ function createTeam() {
             } else if (answers.addEmployee === 'Indeed, an Intern') {
                 createIntern();
             } else {
-                fs.writeFileSync(path.join(__dirname, '/dist/team.html'), generateHTML(managerArray, engineerArray, internArray), "utf-8");
+                fs.writeFileSync(path.join(__dirname, '/dist/index.html'), generateHTML(managerArray, engineerArray, internArray), "utf-8");
             }
         })
 }
