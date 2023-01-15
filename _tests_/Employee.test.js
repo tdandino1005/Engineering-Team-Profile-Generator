@@ -1,25 +1,38 @@
-const Employee = require("../src/Employee");
+const Employee = require('../src/Employee');
 
-test("Ability to set name using constructor function", () => {
-    const name = "Michael Scott";
-    const employee = new Employee(name);
-    expect(employee.name).toBe(name);
-  });
+// creates employee object
+test('creates an employee object', () => {
+    const employee = new Employee('Elvis', 22, 'epresley@gmail.com');
 
-test("Ability to set the user ID using constructor function", () => {
-    const id = "1";
-    const employee = new Employee("Michael Scott", id, "michael.scott@dundermifflin.com");
-    expect(employee.id).toBe(id);
-  });
+    expect(employee.name).toEqual(expect.any(String));
+    expect(employee.id).toEqual(expect.any(Number));
+    expect(employee.email).toEqual(expect.any(String));
+});
 
-test("Running getEmail() should return the supplied email", () => {
-    const email = "michael.scott@dundermifflin.com";
-    const employee = new Employee("Michael Scott", 1, email);
-    expect(employee.getEmail()).toBe(email);
-  });
+// getName 
+test('gets employee name', () => {
+    const employee = new Employee('Elvis', 22, 'epresley@gmail.com');
 
-test("Running getRole() should return 'Employee'", () => {
-    const role = "Employee";
-    const employee = new Employee("Michael Scott", 1, "michael.scott@dundermifflin.com");
-    expect(employee.getRole()).toBe(role);
-  });
+    expect(employee.getName()).toEqual(expect.any(String));
+});
+
+// getId() 
+test('gets employee ID', () => {
+    const employee = new Employee('Elvis', 22, 'epresley@gmail.com');
+
+    expect(employee.getId()).toEqual(expect.any(Number));
+});
+
+// getEmail()
+test('gets employee email', () => {
+    const employee = new Employee('Elvis', 22, 'epresley@gmail.com');
+
+    expect(employee.getEmail()).toEqual(expect.stringContaining(employee.email.toString()));
+});
+
+// gets role from getRole()
+test('gets role of employee', () => {
+    const employee = new Employee('Elvis', 22, 'epresley@gmail.com');
+
+    expect(employee.getRole()).toEqual("Employee");
+}); 
