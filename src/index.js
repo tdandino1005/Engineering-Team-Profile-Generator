@@ -1,8 +1,12 @@
+// node modules
 const fs = require('fs');
 const inquirer = require('inquirer');
 const path = require('path');
 
+//generate HTML link to page
 const generateHTML = require('./src/generateHTML.js');
+
+// team profiles
 const Employee = require('./src/employee.js');
 const Manager = require('./src/manager.js');
 const Engineer = require('./src/engineer.js');
@@ -13,6 +17,13 @@ const managerArray = [];
 const engineerArray = [];
 const internArray = [];
 
+const addManager = () => {
+    return inquirer.prompt([
+        {
+
+        }
+    ])
+}
 const managerQuestions = [
     {
         name: 'managerName',
@@ -109,12 +120,26 @@ function createEngineer() {
         })
 }
 
+function createIntern() {
+    inquirer.prompt(internQuestions)
+        .then(answers => {
+            const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool)
+            internArray.push(intern);
+            createTeam();
+        })
+}
 
 
 function createTeam() {
     inquirer.prompt(addEmployee)
         .then(answers => {
-      
+    if (answers.addEmployee === 'Yes, an Engineer') {
+        createEngineer();
+        } else if (answers.addEmployee === 'Yes, an Intern') {
+            createIntern();
+            } else {
+fs.writeFileSync(path.join(__dirname, '/dist/team.html'), generateHTML(managerArray, engineerArray, internArray), "utf-8");
+            }
         })
 }
 
