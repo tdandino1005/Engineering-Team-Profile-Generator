@@ -8,21 +8,23 @@ function generateHTML(managerArray, engineerArray, internArray) {
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
       <link rel="stylesheet" type="text/css" href="../dist/style.css" />
-      <title>The Team</title>
+      <title>Engineering Team</title>
     </head>
       <body>
           <header>
-              <h1 class="navbar">The Team</h1>
+              <h1 class="navbar">Engineering Team</h1>
           </header>
           ${generateTeam(managerArray, engineerArray, internArray)}
       </body>
   </html>
       `;
   }
+
+  
   
   function generateTeam(managerArray, engineerArray, internArray) {
     let html = '';
-    html += generateManager(managerArray[0]);
+    html = generateManager(managerArray[0]);
     for (i = 0; i < engineerArray.length; i++) {
       html += generateEngineer(engineerArray[i]);
     }
