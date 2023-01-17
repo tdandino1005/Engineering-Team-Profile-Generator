@@ -7,10 +7,10 @@ const path = require('path');
 const generateHTML = require('./src/generateHTML.js');
 
 // team profiles
-const Employee = require('./src/employee.js');
-const Manager = require('./src/manager.js');
-const Engineer = require('./src/engineer.js');
-const Intern = require('./src/intern.js');
+const Employee = require('./lib/employee.js');
+const Manager = require('./lib/manager.js');
+const Engineer = require('./lib/engineer.js');
+const Intern = require('./lib/intern.js');
 
 
 const managerArray = [];
