@@ -1,12 +1,11 @@
 function generateHTML(managerArray, engineerArray, internArray) {
     return `
-      <!DOCTYPE html>
-  <html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
     <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" type="text/css" href="../dist/style.css" />
       <title>Engineering Team</title>
     </head>
@@ -37,7 +36,6 @@ function generateHTML(managerArray, engineerArray, internArray) {
     <div class="card-header">Manager</div>
     <div class="card-body">
     <h5 class="card-title">${manager.getName()}</h5>
-    <ul class="list-group list-group-flush">
         <li class="list-group-item">Employee ID: ${manager.getId()}</li>
         <li class="list-group-item"><a href="mailto:${manager.getEmail()}">Email: ${manager.getEmail()}</a></li>
         <li class="list-group-item">Office Number: ${manager.getOfficeNumber()}</li>
@@ -51,7 +49,6 @@ function generateHTML(managerArray, engineerArray, internArray) {
     <div class="card-header">Engineer</div>
     <div class="card-body">
     <h5 class="card-title">${engineer.getName()}</h5>
-    <ul class="list-group list-group-flush">
         <li class="list-group-item">Employee ID: ${engineer.getName()}</li>
         <li class="list-group-item"><a href="mailto:${engineer.getEmail()}">Email: ${engineer.getEmail()}</a></li>
         <li class="list-group-item"><a href="https://github.com/${engineer.getGithub()}" target="blank">Github: ${engineer.getGithub()}</a></li>
@@ -65,7 +62,6 @@ function generateHTML(managerArray, engineerArray, internArray) {
     <div class="card-header">Intern</div>
     <div class="card-body">
     <h5 class="card-title">${intern.getName()}</h5>
-    <ul class="list-group list-group-flush">
         <li class="list-group-item">Employee ID: ${intern.getId()}</li>
         <li class="list-group-item"><a href="mailto:${intern.getEmail()}">Email: ${intern.getEmail()}</a></li>
         <li class="list-group-item">School: ${intern.getSchool()}</li>
