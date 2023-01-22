@@ -4,7 +4,7 @@
 
 :root {
     --primary: rgb(10, 68, 126);
-    --secondary: white;
+    --secondary: rgba(151, 144, 144, 0);
 }
 
 body {
@@ -14,11 +14,11 @@ body {
 #navbar {
     background-color: var(--primary);
     color: var(--secondary);
-    font-size: 50px;
+    font-size: 60px;
 }
 
 .navbar-brand {
-    font-size: 50px;
+    font-size: 60px;
 }
 
 
