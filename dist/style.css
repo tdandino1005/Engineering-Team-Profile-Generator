@@ -1,35 +1,40 @@
-header {
-    color: white;
-    background-color: rgba(235, 13, 13, 0.591);
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    font-size: 2em;
-    margin: 15px;
-    padding: 10px;
+* {
+    box-sizing: border-box;
 }
 
-main{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 15px;
-    padding: 10px;
+:root {
+    --primary: rgb(10, 68, 126);
+    --secondary: white;
 }
 
-.card {
-    padding: 10px;
-    margin: 15px;
+body {
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+#navbar {
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-size: 50px;
+}
+
+.navbar-brand {
+    font-size: 50px;
+}
+
 
 .card-header {
-    color: white;
-    background-color: rgba(20, 20, 34, 0.584);
+    background-color: var(--primary);
+    color: var(--secondary);
 }
 
-.list-group {
-    color: black;
+.card-body {
+    background-color: var(--secondary);
+    color: var(--primary);
 }
 
-#email {
-    color:rgba(72, 72, 233, 0.584);
+.container {
+    margin: 100px auto;
+    justify-content: space-evenly;
+    display: flex;
+    
 }
