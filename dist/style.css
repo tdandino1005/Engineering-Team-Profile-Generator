@@ -1,40 +1,46 @@
+/* Stylesheet for Generated HTML */
+
 * {
     box-sizing: border-box;
 }
 
-:root {
-    --primary: rgb(74, 151, 228);
-    --secondary: rgba(151, 144, 144, 0);
-}
-
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #navbar {
-    background-color: var(--primary);
-    color: var(--secondary);
-    font-size: 60px;
+    background-color: #048;
+    color: rgb(179, 177, 175);
+    
 }
 
 .navbar-brand {
-    font-size: 60px;
+    font-size: 50px;
 }
 
-
 .card-header {
-    background-color: var(--primary);
-    color: var(--secondary);
+    background-color: rgba(99, 99, 92, 0.904);
+    color: rgb(1, 13, 26);
+    padding: 20px;
+    box-shadow: 10px 10px 5px rgb(153, 150, 150);
 }
 
 .card-body {
-    background-color: var(--secondary);
-    color: var(--primary);
+    background-color: rgb(161, 152, 152);
+    font-size: 18px;
+    padding: 20px;
+    box-shadow: 10px 10px 5px rgb(37, 35, 35);
 }
 
 .container {
-    margin: 100px auto;
-    justify-content: space-evenly;
-    display: flex;
-    
+    margin: 40px auto;
 }
+
+.icon-link {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid rgb(10, 9, 9);
+}
+
+
